@@ -209,7 +209,7 @@
   .book-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
   .book{
     background:var(--surface);border:1px solid var(--line);border-radius:14px;
-    padding:22px 20px 20px 24px;position:relative;box-shadow:var(--shadow);
+    padding:0 0 18px;overflow:hidden;position:relative;box-shadow:var(--shadow);
     display:flex;flex-direction:column;gap:7px;min-height:150px;
     transition:transform .35s cubic-bezier(.2,.8,.25,1),box-shadow .35s ease,border-color .35s ease;
   }
@@ -319,6 +319,10 @@
   .buy{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
   .buy a{font-size:.76rem;font-weight:700;padding:4px 10px;border:1px solid var(--line-strong);border-radius:999px;color:var(--accent-ink);text-decoration:none;background:var(--surface)}
   .buy a:hover{border-color:var(--accent);color:var(--accent)}
+  .book::before{display:none}
+  .book>*:not(.book-cover){margin-left:20px;margin-right:18px}
+  .book .num{margin-top:12px}
+  .book .book-cover{border-radius:0;box-shadow:none;margin-bottom:0}
 </style>
 </head>
 <body>
